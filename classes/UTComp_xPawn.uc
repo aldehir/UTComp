@@ -1036,5 +1036,5 @@ defaultproperties
      lgcolor=(B=80,G=40,R=40)
      beffectscleared=True
 
-     MultiDodgesRemaining=1
+     MultiDodgesRemaining=0
 }
