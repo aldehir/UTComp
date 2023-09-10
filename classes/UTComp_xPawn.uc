@@ -28,6 +28,9 @@ var vector OldLocation;
 
 replication
 {
+  reliable if (Role==ROLE_Authority)
+     MultiDodgesRemaining;
+
   unreliable if (Role==Role_authority)
      bShieldActive, bLinkActive, bShockActive, bLGactive, overlayActive;
 }
