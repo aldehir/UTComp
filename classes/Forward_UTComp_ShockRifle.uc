@@ -7,6 +7,6 @@ CacheExempt;
 
 DefaultProperties
 {
-   FireModeClass[0]=Class'UTCompv18b_k1.Forward_UTComp_ShockBeamFire'
-   FireModeClass[1] = Class'UTCompv18b_k1.Forward_UTComp_ShockProjFire'
+   FireModeClass[0]=Class'UTCompv18b_k1_alpha.Forward_UTComp_ShockBeamFire'
+   FireModeClass[1] = Class'UTCompv18b_k1_alpha.Forward_UTComp_ShockProjFire'
 }
