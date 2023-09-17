@@ -5,7 +5,7 @@ var float PingDT;
 var bool bUseEnhancedNetCode;
 
 const PROJ_TIMESTEP = 0.0201;
-const MAX_PROJECTILE_FUDGE = 0.07500;
+const MAX_PROJECTILE_FUDGE = 0.27500;
 const SLACK = 0.025;
 
 var class<Projectile> FakeProjectileClass;
