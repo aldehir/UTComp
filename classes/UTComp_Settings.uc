@@ -78,8 +78,8 @@ defaultproperties
     bStats=True
     DemoRecordingMask="%d-(%t)-%m-%p"
     ScreenShotMask="%d-(%t)-%m-%p"
-    FriendlySound="UTCompv18bK.Sounds.HitSoundFriendly"
-    EnemySound="UTCompv18bK.Sounds.HitSound"
+    FriendlySound="UTCompv18bKAlpha.Sounds.HitSoundFriendly"
+    EnemySound="UTCompv18bKAlpha.Sounds.HitSound"
     bEnableHitSounds=true
     HitSoundVolume=1.0
     bCPMAStyleHitsounds=true

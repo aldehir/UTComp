@@ -79,5 +79,5 @@ simulated function SpawnEffects()
 
 defaultproperties
 {
-     CoilClass=Class'UTCompv18bK.NewNet_ShockBeamCoil'
+     CoilClass=Class'UTCompv18bKAlpha.NewNet_ShockBeamCoil'
 }

@@ -7,6 +7,6 @@ CacheExempt;
 
 defaultproperties
 {
-    FireModeClass[0] = Class'UTCompv18bK.Forward_NewNet_FlakFire'
-    FireModeClass[1] = Class'UTCompv18bK.Forward_newNet_FlakAltFire'
+    FireModeClass[0] = Class'UTCompv18bKAlpha.Forward_NewNet_FlakFire'
+    FireModeClass[1] = Class'UTCompv18bKAlpha.Forward_newNet_FlakAltFire'
 }

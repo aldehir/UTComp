@@ -130,7 +130,7 @@ event Landed(vector HitNormal)
 
 simulated function UpdatePrecacheMaterials()
 {
-	Level.AddPrecacheMaterial(Material'UTCompv18bK.PurpleMarker');
+	Level.AddPrecacheMaterial(Material'UTCompv18bKAlpha.PurpleMarker');
 	Super.UpdatePrecacheMaterials();
 }
 
@@ -220,7 +220,7 @@ simulated function TickFX(float DeltaTime)
 		else if(ColorMode==2)
             texture = texture'BlueMarker_t';
         else if(ColorMode==3)
-            texture = texture'UTCompv18bK.PurpleMarker';
+            texture = texture'UTCompv18bKAlpha.PurpleMarker';
         else if ( PlayerReplicationInfo.Team.TeamIndex == 0 )
 			texture = Texture'RedMarker_t';
 		else

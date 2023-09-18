@@ -38,5 +38,5 @@ function AdjustPlayerDamage( out int Damage, Pawn InstigatedBy, Vector HitLocati
 
 DefaultProperties
 {
-    FireModeClass(1)=Class'UTCompv18bK.Forward_ShieldAltFire'
+    FireModeClass(1)=Class'UTCompv18bKAlpha.Forward_ShieldAltFire'
 }

@@ -282,6 +282,6 @@ simulated function SpawnBeamEffect(vector HitLocation, vector HitNormal, vector 
 DefaultProperties
 {
     ItemName="NewNet SSR"
-    FireModeClass(0)=class'UTCompv18bK.NewNet_SuperShockBeamFire'
-    FireModeClass(1)=class'UTCompv18bK.NewNet_SuperShockBeamFire'
+    FireModeClass(0)=class'UTCompv18bKAlpha.NewNet_SuperShockBeamFire'
+    FireModeClass(1)=class'UTCompv18bKAlpha.NewNet_SuperShockBeamFire'
 }
