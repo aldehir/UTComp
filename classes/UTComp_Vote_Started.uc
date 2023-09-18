@@ -14,5 +14,5 @@ static simulated function ClientReceive (PlayerController P, optional int Switch
 
 defaultproperties
 {
-     error2=Sound'UTCompv18b_k1.Sounds.error2'
+     error2=Sound'UTCompv18bK.Sounds.error2'
 }

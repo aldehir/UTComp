@@ -98,6 +98,6 @@ simulated function FindFPM()
 
 defaultproperties
 {
-     FakeProjectileClass=Class'UTCompv18b_k1.NewNet_Fake_ShockProjectile'
-     ProjectileClass=Class'UTCompv18b_k1.NewNet_ShockProjectile'
+     FakeProjectileClass=Class'UTCompv18bK.NewNet_Fake_ShockProjectile'
+     ProjectileClass=Class'UTCompv18bK.NewNet_ShockProjectile'
 }
