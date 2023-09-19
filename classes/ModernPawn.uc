@@ -57,7 +57,6 @@ simulated function UpdateBackgroundAnimation(float DeltaTime)
     }
 
     OldPhysics = Physics;
-    OldVelocity = Velocity;
 }
 
 simulated function UpdateInAirBackground()
