@@ -602,7 +602,7 @@ DefaultProperties
      LockWeaponTime = 6.0
      TimeLimit = 2
      GoalScore=8
-     GameName="UTComp Clan Arena 1.8b-K"
+     GameName="UTComp Clan Arena 1.8b-K4"
      bAllowWeaponThrowing=false
      SecondaryMutatorClass="UTCompv18bK.MutUTComp"
      Round_Health = 150
