@@ -1,5 +1,5 @@
 
-class UTComp_xPawn extends xPawn;
+class UTComp_xPawn extends ModernPawn;
 
 #exec texture import File=textures\purpmark.dds Name=PurpleMarker
 
@@ -1025,7 +1025,6 @@ event UpdateEyeHeight( float DeltaTime )
 defaultproperties
 {
      bAlwaysRelevant=True
-     bNetInitial=True
      BrightSkinColors(0)=(A=255)
      BrightSkinColors(1)=(R=200,A=255)
      BrightSkinColors(2)=(B=200,G=64,R=50,A=255)
