@@ -395,16 +395,33 @@ simulated function SpawnClientBeamEffect(Vector Start, Rotator Dir, Vector HitLo
 function SpawnBeamEffect(Vector Start, Rotator Dir, Vector HitLocation, Vector HitNormal, int ReflectNum)
 {
     local ShockBeamEffect Beam;
-    if(!bUseEnhancedNetCode)
+
+    if (Weapon != None)
     {
-        Super.SpawnBeamEffect(Start, Dir, HitLocation, HitNormal, ReflectNum);
-        return;
+        if(bUseEnhancedNetCode)
+        {
+            if ( (Instigator.PlayerReplicationInfo.Team != None) && (Instigator.PlayerReplicationInfo.Team.TeamIndex == 1) ) {
+                Beam = Weapon.Spawn(class'NewNet_BlueSuperShockBeam', Weapon.Owner,, Start, Dir);
+                if (Beam == none) return;
+                Beam.CoilClass = class'NewNet_ShockBeamCoilBlue';
+            } else {
+                Beam = Weapon.Spawn(class'NewNet_SuperShockBeamEffect', Weapon.Owner,, Start, Dir);
+                if (Beam == none) return;
+                Beam.CoilClass = class'NewNet_ShockBeamCoilB';
+            }
+        }
+        else
+        {
+            if ( (Instigator.PlayerReplicationInfo.Team != None) && (Instigator.PlayerReplicationInfo.Team.TeamIndex == 1) ) {
+                Beam = Weapon.Spawn(Class'XWeapons.BlueSuperShockBeam',,, Start, Dir);
+                Beam.CoilClass = class'ShockBeamCoilBlue';
+            } else {
+                Beam = Weapon.Spawn(Class'XWeapons.SuperShockBeamEffect',,, Start, Dir);
+                Beam.CoilClass = class'ShockBeamCoilB';
+            }
+        }
     }
 
-    if ( (Instigator.PlayerReplicationInfo.Team != None) && (Instigator.PlayerReplicationInfo.Team.TeamIndex == 1) )
-        Beam = Weapon.Spawn(class'NewNet_BlueSuperShockBeam',Weapon.Owner,, Start, Dir);
-    else
-        Beam = Weapon.Spawn(BeamEffectClass,Weapon.Owner,, Start, Dir);
     if (ReflectNum != 0) Beam.Instigator = None; // prevents client side repositioning of beam start
     Beam.AimAt(HitLocation, HitNormal);
 }
