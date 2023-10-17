@@ -260,19 +260,20 @@ simulated function SpawnBeamEffect(vector HitLocation, vector HitNormal, vector 
 {
     local ShockBeamEffect Beam;
 
-    if(bClientDemoNetFunc)
-    {
+    if (bClientDemoNetFunc) {
         Start.Z = Start.Z - 64.0;
     }
-    if ( (Instigator.PlayerReplicationInfo.Team != None) && (Instigator.PlayerReplicationInfo.Team.TeamIndex == 1) ) {
+
+    if (
+        Instigator.PlayerReplicationInfo.Team != None &&
+        Instigator.PlayerReplicationInfo.Team.TeamIndex == 1
+    ) {
         Beam = Spawn(class'NewNet_Client_BlueSuperShockBeam',,, Start, Dir);
-        if (Beam == none) return;
-        Beam.CoilClass = class'NewNet_Client_ShockBeamCoilBlue';
     } else {
         Beam = Spawn(class'NewNet_Client_SuperShockBeamEffect',,, Start, Dir);
-        if (Beam == none) return;
-        Beam.CoilClass = class'NewNet_Client_ShockBeamCoilB';
     }
+
+    if (Beam == none) return;
 
     if (ReflectNum != 0) Beam.Instigator = None; // prevents client side repositioning of beam start
     Beam.AimAt(HitLocation, HitNormal);

@@ -402,12 +402,8 @@ function SpawnBeamEffect(Vector Start, Rotator Dir, Vector HitLocation, Vector H
         {
             if ( (Instigator.PlayerReplicationInfo.Team != None) && (Instigator.PlayerReplicationInfo.Team.TeamIndex == 1) ) {
                 Beam = Weapon.Spawn(class'NewNet_BlueSuperShockBeam', Weapon.Owner,, Start, Dir);
-                if (Beam == none) return;
-                Beam.CoilClass = class'NewNet_ShockBeamCoilBlue';
             } else {
                 Beam = Weapon.Spawn(class'NewNet_SuperShockBeamEffect', Weapon.Owner,, Start, Dir);
-                if (Beam == none) return;
-                Beam.CoilClass = class'NewNet_ShockBeamCoilB';
             }
         }
         else
@@ -422,6 +418,8 @@ function SpawnBeamEffect(Vector Start, Rotator Dir, Vector HitLocation, Vector H
         }
     }
 
+    if (Beam == none) return;
+
     if (ReflectNum != 0) Beam.Instigator = None; // prevents client side repositioning of beam start
     Beam.AimAt(HitLocation, HitNormal);
 }
@@ -429,5 +427,5 @@ function SpawnBeamEffect(Vector Start, Rotator Dir, Vector HitLocation, Vector H
 
 DefaultProperties
 {
-    BeamEffectClass=Class'UTCompv18bK.NewNet_SuperShockBeamEffect'
+    BeamEffectClass=None
 }
