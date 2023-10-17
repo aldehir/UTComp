@@ -1,4 +1,6 @@
-class NewNet_SuperShockBeamEffect extends SuperShockBeamEffect;
+class NewNet_SuperShockBeamEffect extends ShockBeamEffect;
+
+var class<ShockBeamEffect> ExtraBeamClass;
 
 function AimAt(Vector hl, Vector hn)
 {
@@ -76,7 +78,7 @@ simulated function SpawnEffects()
 		    Coil.mSpawnVecA = mSpawnVecA;
     }
 
-    E = Spawn(class'NewNet_ExtraRedBeam', Owner);
+    E = Spawn(ExtraBeamClass, Owner);
     if ( E != None )
         E.AimAt(mSpawnVecA, HitNormal);
 }
@@ -84,5 +86,7 @@ simulated function SpawnEffects()
 
 defaultproperties
 {
-     CoilClass=Class'UTCompv18bK.NewNet_ShockBeamCoilB'
+     CoilClass=Class'NewNet_ShockBeamCoilB'
+     ExtraBeamClass=class'NewNet_ExtraRedBeam'
+     Skins(0)=ColorModifier'InstagibEffects.Effects.RedSuperShockBeam'
 }
